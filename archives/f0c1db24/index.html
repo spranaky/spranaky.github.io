@@ -1,115 +1,121 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo与Next踩坑记录 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="简述本网站使用了Hexo静态博客系统搭建而成，采用了Next主题，其中有许多设置参数都是直接抄别人的，这部分我就不写出来了，因为我也不懂什么意思。在对博客进行设置过程中，我也踩到了很多坑，也希望在我的博客写出来之后能有更多人规避这些错误。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo与Next踩坑记录">
-<meta property="og:url" content="http://example.com/2020/07/31/hexo-next-settings/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="简述本网站使用了Hexo静态博客系统搭建而成，采用了Next主题，其中有许多设置参数都是直接抄别人的，这部分我就不写出来了，因为我也不懂什么意思。在对博客进行设置过程中，我也踩到了很多坑，也希望在我的博客写出来之后能有更多人规避这些错误。">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://spranaky.oss-accelerate.aliyuncs.com/articles/f0c1db24/1.png">
-<meta property="og:image" content="https://spranaky.oss-accelerate.aliyuncs.com/articles/f0c1db24/3.png">
-<meta property="og:image" content="https://spranaky.oss-accelerate.aliyuncs.com/articles/f0c1db24/4.png">
-<meta property="og:image" content="https://spranaky.oss-accelerate.aliyuncs.com/articles/f0c1db24/5.png">
-<meta property="og:image" content="https://spranaky.oss-accelerate.aliyuncs.com/articles/f0c1db24/6.png">
-<meta property="og:image" content="https://spranaky.oss-accelerate.aliyuncs.com/articles/f0c1db24/7.png">
-<meta property="og:image" content="https://spranaky.oss-accelerate.aliyuncs.com/articles/f0c1db24/8.png">
-<meta property="article:published_time" content="2020-07-31T00:21:27.000Z">
-<meta property="article:modified_time" content="2021-04-04T11:55:32.808Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="Next">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://spranaky.oss-accelerate.aliyuncs.com/articles/f0c1db24/1.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+<html lang="zh-CN">
+  <head><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-  
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
+<meta name="description" content="Hexo与Next踩坑记录"/><meta name="keywords" content="Spring的博客" /><link rel="alternate" href="/default" title="NiSpring" ><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0" />
+<link rel="canonical" href="https://blog.spranaky.xyz/archives/f0c1db24/"/>
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0" />
+
+<script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":"","latex":false};
+</script>
+
+    <title>Hexo与Next踩坑记录 - NiSpring</title>
+  <meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">NiSpring</a>
   </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">首页
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">归档
+          </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签
+          </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">NiSpring</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            首页
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            归档
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            标签
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            分类
+            </a>
+        </li>
+      </ul></nav>
 </header>
 
-      <div class="outer">
-        <section id="main"><article id="post-hexo-next-settings" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/07/31/hexo-next-settings/" class="article-date">
-  <time class="dt-published" datetime="2020-07-31T00:21:27.000Z" itemprop="datePublished">2020-07-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
-  </div>
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">Hexo与Next踩坑记录
+        </h1>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      Hexo与Next踩坑记录
-    </h1>
-  
+      <div class="post-meta">
+        <span class="post-time">
+          2020-07-31
+        </span><span class="post-category">
+            <a href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+            </span>
+        </div>
+    </header>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>本网站使用了Hexo静态博客系统搭建而成，采用了Next主题，其中有许多设置参数都是直接抄别人的，这部分我就不写出来了，因为我也不懂什么意思。在对博客进行设置过程中，我也踩到了很多坑，也希望在我的博客写出来之后能有更多人规避这些错误。</p>
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E8%BF%B0"><span class="toc-text">简述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99"><span class="toc-text">搭建Hexo博客网站</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-text">新建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85Hexo"><span class="toc-text">全局安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Github"><span class="toc-text">部署到Github</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE"><span class="toc-text">博客网站配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">网站基本属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5"><span class="toc-text">文章永久链接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E6%96%87%E7%AB%A0%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-text">新文章的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%A1%B5%E9%9D%A2"><span class="toc-text">基本页面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AENext%E4%B8%BB%E9%A2%98"><span class="toc-text">配置Next主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE"><span class="toc-text">推荐设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#next-yml"><span class="toc-text">next.yml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E4%B8%BB%E9%A2%98scheme"><span class="toc-text">选择主题scheme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8next%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%85%B3%E4%BA%8E%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2"><span class="toc-text">在next的菜单中添加关于、标签、分类页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E9%A2%84%E8%A7%88%E5%8A%9F%E8%83%BD"><span class="toc-text">添加图片放大预览功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="toc-text">添加搜索功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8%E6%8C%89%E9%92%AE"><span class="toc-text">回到顶部按钮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%92%8C%E9%A2%84%E8%AE%A1%E9%98%85%E8%AF%BB%E6%97%B6%E9%97%B4"><span class="toc-text">设置字数统计和预计阅读时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%8D%E5%88%B6%E5%92%8C%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-text">设置代码块复制和代码高亮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF"><span class="toc-text">在文章底部增加版权信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8-tag-%E5%9B%BE%E6%A0%87"><span class="toc-text">修改文章底部 tag 图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%A4%B4%E5%83%8F%E5%92%8C%E5%9B%BE%E6%A0%87"><span class="toc-text">设置头像和图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5"><span class="toc-text">侧边栏社交链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E7%9A%84%E6%A8%A1%E6%9D%BF"><span class="toc-text">更改新建文章的模板</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6"><span class="toc-text">进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E5%8D%9A%E5%AE%A2%E8%AE%BE%E7%BD%AE%E9%98%85%E8%AF%BB%E9%87%8F%E5%92%8C%E8%AF%84%E8%AE%BA"><span class="toc-text">为博客设置阅读量和评论</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol>
+    </div>
+  </div><div class="post-content"><h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>本网站使用了Hexo静态博客系统搭建而成，采用了Next主题，其中有许多设置参数都是直接抄别人的，这部分我就不写出来了，因为我也不懂什么意思。在对博客进行设置过程中，我也踩到了很多坑，也希望在我的博客写出来之后能有更多人规避这些错误。</p>
 <span id="more"></span>
 
 
@@ -141,12 +147,12 @@
 <p>如果没什么问题的话，打开浏览器在地址栏里输入<code>https://&lt;你的Github用户名&gt;.github.io</code>就可以看到效果了。</p>
 <h2 id="博客网站配置"><a href="#博客网站配置" class="headerlink" title="博客网站配置"></a>博客网站配置</h2><p>打开博客项目下的<code>_config.yml</code>文件，我们来修改几个常用的参数。</p>
 <h3 id="网站基本属性"><a href="#网站基本属性" class="headerlink" title="网站基本属性"></a>网站基本属性</h3><p>其中标记为<code># Site</code>的块是网站的基本设置，如下：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">ayyyy!</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站描述，可以是自己喜欢的一句话</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站关键词</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">作者</span> <span class="comment"># 网站作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 语言，语言文件在主题目录下查看</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 时区</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">ayyyy!</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站描述，可以是自己喜欢的一句话</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 网站关键词，一般用于搜索引擎检索</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">作者</span> <span class="comment"># 网站作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 语言，语言文件在主题目录下查看</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span> <span class="comment"># 时区</span></span><br></pre></td></tr></table></figure>
 
-<p>还有一个<code>URL</code>块，其中参数<code>url</code>是网站的url，将决定着比如版权上的链接，例如我的是<code>https://blog.spranaky.xyz/</code>；<code>root</code>参数决定网站运行的目录（有些人的网站是运行在一个网站的子目录下的，才需要修改这个参数），默认为<code>/</code>。</p>
+<p>还有一个<code>URL</code>块，其中参数<code>url</code>是网站的url，将决定着比如版权上的链接，例如我的是<code>https://blog.spranaky.xyz</code>；<code>root</code>参数决定网站运行的目录（有些人的网站是运行在一个网站的子目录下的，才需要修改这个参数），默认为<code>/</code>。</p>
 <p>在创建新博客的时候，Hexo会根据<code>Writing</code>块的<code>new_post_name</code>参数决定新创建的博客在文件夹中的位置。比如，设置成<code>:year/:title.md</code>，则会根据年份在<code>博客项目/source/_posts/</code>文件夹下创建新博客，一般根据年份就好了，毕竟像我这样的人一年也写不了几篇博客。</p>
 <h3 id="文章永久链接"><a href="#文章永久链接" class="headerlink" title="文章永久链接"></a>文章永久链接</h3><p>默认的配置的文章url应该类似于这样：<code>https://blog.spranaky.xyz/2020/07/29/hello-world/</code>，这样既不方便搜索引擎的检索，又不方便一些中文标题。如果能让一篇博客文章的url看起来像这样就好了：<code>https://blog.spranaky.xyz/archives/f0c1db24/</code>，这样就确保了一篇文章的url与其内容无关联，无论内容标题怎么变，其永久链接都不会变。当然你选择设不设置都可以，全凭个人喜好。下面来介绍使用这种url的方法。</p>
-<p>首先先安装一个插件：</p>
+<p>首先先在博客文件夹中安装一个插件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
 
 <p>修改<code>_config.yml</code>的<code>permalink</code>参数，将其设置为<code>archives/:abbrlink/</code>，其中的<code>archives</code>可以随你喜欢去修改。并在<code>permalink</code>参数的后面添加一个<code>abbrlink</code>参数，顺便把<code>permalink_defaults</code>参数注释掉。完成之后就像这个样子：</p>
@@ -277,122 +283,55 @@
 <p><a target="_blank" rel="noopener" href="http://www.guaini.blog/archives/106054ca.html">http://www.guaini.blog/archives/106054ca.html</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tuckEnough/article/details/107383201">https://blog.csdn.net/tuckEnough/article/details/107383201</a></p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/07/31/hexo-next-settings/" data-id="ckn33znis0000qkfkdlvpcxzb" data-title="Hexo与Next踩坑记录" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Next/" rel="tag">Next</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Next/" rel="tag">Next</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Next/" style="font-size: 10px;">Next</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/07/31/hexo-next-settings/">Hexo与Next踩坑记录</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2021 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="https://blog.spranaky.xyz">spranaky</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="https://blog.spranaky.xyz/archives/f0c1db24/">https://blog.spranaky.xyz/archives/f0c1db24/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
   </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/Hexo/">Hexo</a>
+            <a href="/tags/Next/">Next</a>
+            </div>
+        
+        <nav class="post-nav"></nav></footer>
+    </article></div><div class="comments" id="comments"></div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    </div><div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2020 - 2021<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">spranaky</span>
+  </span>
+</div>
 </footer>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
 </body>
 </html>
