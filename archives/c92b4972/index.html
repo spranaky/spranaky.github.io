@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="今天——2021年7月1日——是中国共产党百年华诞。作为一个中国人，感到骄傲和自豪是理所应当的。 所以，我画了两幅画来表示庆祝。其实也不能说是画，但是有作画过程，所以就暂且定义为“画”好了。 这两幅画分别是国旗和党旗，先把图片贴出来。   为了方便作图，我还写了一个小工具tuul.py。用途很简单，就是在turtle库和程序员界面之间增设一层，让程序员可以自由缩放画面比例，以及设置一个临时相对坐标">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于国旗和党旗画法的问题">
+<meta property="og:url" content="https://blog.spranaky.xyz/archives/c92b4972/index.html">
+<meta property="og:site_name" content="NiSpring">
+<meta property="og:description" content="今天——2021年7月1日——是中国共产党百年华诞。作为一个中国人，感到骄傲和自豪是理所应当的。 所以，我画了两幅画来表示庆祝。其实也不能说是画，但是有作画过程，所以就暂且定义为“画”好了。 这两幅画分别是国旗和党旗，先把图片贴出来。   为了方便作图，我还写了一个小工具tuul.py。用途很简单，就是在turtle库和程序员界面之间增设一层，让程序员可以自由缩放画面比例，以及设置一个临时相对坐标">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://alan-chen.oss-cn-shenzhen.aliyuncs.com/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97.png">
+<meta property="og:image" content="https://alan-chen.oss-cn-shenzhen.aliyuncs.com/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E5%85%9A%E6%97%97.png">
+<meta property="article:published_time" content="2021-07-01T12:43:26.000Z">
+<meta property="article:modified_time" content="2021-07-01T15:02:16.196Z">
+<meta property="article:author" content="spranaky">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="画">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://alan-chen.oss-cn-shenzhen.aliyuncs.com/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>关于国旗和党旗画法的问题</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇 " href="/archives/f34b3a09/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部 " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章 " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.spranaky.xyz/archives/c92b4972/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.spranaky.xyz/archives/c92b4972/&text=关于国旗和党旗画法的问题"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.spranaky.xyz/archives/c92b4972/&is_video=false&description=关于国旗和党旗画法的问题"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=关于国旗和党旗画法的问题&body=Check out this article: https://blog.spranaky.xyz/archives/c92b4972/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.spranaky.xyz/archives/c92b4972/&name=关于国旗和党旗画法的问题&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.spranaky.xyz/archives/c92b4972/&t=关于国旗和党旗画法的问题"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        关于国旗和党旗画法的问题
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">spranaky</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-07-01T12:43:26.000Z" itemprop="datePublished">2021-07-01</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%80%A7/">技术性</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Python/" rel="tag">Python</a>, <a class="tag-link-link" href="/tags/%E7%94%BB/" rel="tag">画</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>今天——2021年7月1日——是中国共产党百年华诞。作为一个中国人，感到骄傲和自豪是理所应当的。</p>
+<p>所以，我画了两幅画来表示庆祝。其实也不能说是画，但是有作画过程，所以就暂且定义为“画”好了。</p>
+<p>这两幅画分别是国旗和党旗，先把图片贴出来。</p>
+<p><img src="https://alan-chen.oss-cn-shenzhen.aliyuncs.com/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97.png" alt="中华人民共和国国旗"></p>
+<p><img src="https://alan-chen.oss-cn-shenzhen.aliyuncs.com/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E5%85%9A%E6%97%97.png" alt="中国共产党党旗"></p>
+<p>为了方便作图，我还写了一个小工具<code>tuul.py</code>。用途很简单，就是在turtle库和程序员界面之间增设一层，让程序员可以自由缩放画面比例，以及设置一个临时相对坐标系。另外还把一些常用作图函数绑定到了一起。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> turtle <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="comment">###############################################################################</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>():</span></span><br><span class="line">    ORIGINX = <span class="number">0</span></span><br><span class="line">    ORIGINY = <span class="number">0</span></span><br><span class="line">    P = <span class="number">8</span></span><br><span class="line"></span><br><span class="line"><span class="comment">###############################################################################</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pos</span>():</span></span><br><span class="line">    x, y = turtle.pos()</span><br><span class="line">    <span class="keyword">return</span> ((x-C.ORIGINX)/C.P, (y-C.ORIGINY)/C.P)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">goto</span>(<span class="params">x, y=<span class="literal">None</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> y == <span class="literal">None</span>:</span><br><span class="line">        a, b = x</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        a, b = x, y</span><br><span class="line">    turtle.goto(a*C.P+C.ORIGINX, b*C.P+C.ORIGINY)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">s</span>):</span></span><br><span class="line">    turtle.forward(s*C.P)</span><br><span class="line">fd = forward</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">backward</span>(<span class="params">s</span>):</span></span><br><span class="line">    turtle.backward(s*C.P)</span><br><span class="line">bk = backward</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">circle</span>(<span class="params">r, c</span>):</span></span><br><span class="line">    <span class="comment"># r为半径，c为转过的圆心角</span></span><br><span class="line">    turtle.circle(r*C.P, c)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dot</span>(<span class="params">size=<span class="literal">None</span>, *color</span>):</span></span><br><span class="line">    <span class="keyword">if</span> size == <span class="literal">None</span>:</span><br><span class="line">        s = <span class="built_in">max</span>(turtle.pensize()+<span class="number">4</span>, <span class="number">2</span>*turtle.pensize())</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        s = size</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(color) == <span class="number">0</span>:</span><br><span class="line">        turtle.dot(s*C.P)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        turtle.dot(s*C.P, color)</span><br><span class="line"></span><br><span class="line"><span class="comment">###############################################################################</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gethome</span>():</span></span><br><span class="line">    <span class="keyword">return</span> (C.ORIGINX/C.P, C.ORIGINY/C.P)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sethome</span>(<span class="params">x, y=<span class="literal">None</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> y == <span class="literal">None</span>:</span><br><span class="line">        a, b = x</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        a, b = x, y</span><br><span class="line">    C.ORIGINX = a * C.P</span><br><span class="line">    C.ORIGINY = b * C.P</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">resethome</span>():</span></span><br><span class="line">    sethome(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">setp</span>(<span class="params">p</span>):</span></span><br><span class="line">    C.P = p</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">go</span>(<span class="params">x, y=<span class="literal">None</span></span>):</span></span><br><span class="line">    turtle.penup()</span><br><span class="line">    <span class="keyword">if</span> y == <span class="literal">None</span>:</span><br><span class="line">        goto(x)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        goto(x, y)</span><br><span class="line">    turtle.pendown()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sqrt</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">return</span> math.sqrt(n)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sin</span>(<span class="params">d</span>):</span></span><br><span class="line">    <span class="keyword">return</span> math.sin(math.pi / <span class="number">180</span> * d)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cos</span>(<span class="params">d</span>):</span></span><br><span class="line">    <span class="keyword">return</span> math.cos(math.pi / <span class="number">180</span> * d)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tan</span>(<span class="params">d</span>):</span></span><br><span class="line">    <span class="keyword">return</span> math.tan(math.pi / <span class="number">180</span> * d)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">asin</span>(<span class="params">p</span>):</span></span><br><span class="line">    <span class="keyword">return</span> math.asin(p) * <span class="number">180</span> / math.pi</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">acos</span>(<span class="params">p</span>):</span></span><br><span class="line">    <span class="keyword">return</span> math.acos(p) * <span class="number">180</span> / math.pi</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">atan</span>(<span class="params">p</span>):</span></span><br><span class="line">    <span class="keyword">return</span> math.atan(p) * <span class="number">180</span> / math.pi</span><br></pre></td></tr></table></figure>
+
+<p>国旗画法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tuul <span class="keyword">as</span> t</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">face</span>(<span class="params">width, height</span>):</span></span><br><span class="line">    t.color(<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">    t.go(-width/<span class="number">2</span>, -height/<span class="number">2</span>)</span><br><span class="line">    t.begin_fill()</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">        t.fd(width)</span><br><span class="line">        t.left(<span class="number">90</span>)</span><br><span class="line">        t.fd(height)</span><br><span class="line">        t.left(<span class="number">90</span>)</span><br><span class="line">    t.end_fill()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">star</span>(<span class="params">r, h, c</span>):</span></span><br><span class="line">    <span class="comment"># r为五角星半径，h为顶端角所对方向，c为五角星中心位置</span></span><br><span class="line">    t.go(c)</span><br><span class="line">    t.seth(h)</span><br><span class="line">    t.fd(r)</span><br><span class="line">    t.right(<span class="number">18</span>)</span><br><span class="line">    a = r * t.tan(<span class="number">36</span>)</span><br><span class="line">    t.begin_fill()</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        t.right(<span class="number">144</span>)</span><br><span class="line">        t.fd(a)</span><br><span class="line">        t.left(<span class="number">72</span>)</span><br><span class="line">        t.fd(a)</span><br><span class="line">    t.end_fill()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">five_stars</span>():</span></span><br><span class="line">    t.color(<span class="string">&#x27;yellow&#x27;</span>)</span><br><span class="line">    star(<span class="number">12</span>, <span class="number">90</span>, (-<span class="number">40</span>, <span class="number">20</span>))</span><br><span class="line">    star(<span class="number">4</span>, <span class="number">180</span>+t.atan(<span class="number">3</span>/<span class="number">5</span>), (-<span class="number">20</span>, <span class="number">32</span>))</span><br><span class="line">    star(<span class="number">4</span>, <span class="number">180</span>+t.atan(<span class="number">1</span>/<span class="number">7</span>), (-<span class="number">12</span>, <span class="number">24</span>))</span><br><span class="line">    star(<span class="number">4</span>, <span class="number">90</span>+t.atan(<span class="number">7</span>/<span class="number">2</span>), (-<span class="number">12</span>, <span class="number">12</span>))</span><br><span class="line">    star(<span class="number">4</span>, <span class="number">90</span>+t.atan(<span class="number">5</span>/<span class="number">4</span>), (-<span class="number">20</span>, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    t.setup(width=<span class="number">0.75</span>, height=<span class="number">0.75</span>)</span><br><span class="line">    t.speed(<span class="number">5</span>) <span class="comment"># 绘图速度</span></span><br><span class="line">    t.pensize(<span class="number">1</span>) <span class="comment"># 笔直径</span></span><br><span class="line">    t.bgcolor(<span class="string">&#x27;white&#x27;</span>) <span class="comment"># 背景颜色</span></span><br><span class="line">    t.title(<span class="string">&quot;中华人民共和国国旗&quot;</span>)</span><br><span class="line">    t.setp(<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line">    face(<span class="number">120</span>, <span class="number">80</span>)</span><br><span class="line">    five_stars()</span><br><span class="line"></span><br><span class="line">    t.hideturtle()</span><br><span class="line">    t.done()</span><br></pre></td></tr></table></figure>
+
+<p>党旗画法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tuul <span class="keyword">as</span> t</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">face</span>(<span class="params">width, height</span>):</span></span><br><span class="line">    t.color(<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">    t.go(-width/<span class="number">2</span>, -height/<span class="number">2</span>)</span><br><span class="line">    t.begin_fill()</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">        t.fd(width)</span><br><span class="line">        t.left(<span class="number">90</span>)</span><br><span class="line">        t.fd(height)</span><br><span class="line">        t.left(<span class="number">90</span>)</span><br><span class="line">    t.end_fill()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hammer</span>():</span></span><br><span class="line">    s2 = t.sqrt(<span class="number">2</span>)</span><br><span class="line">    t.go(<span class="number">29</span>, -<span class="number">33</span>)</span><br><span class="line">    t.begin_fill()</span><br><span class="line">    t.seth(<span class="number">45</span>)</span><br><span class="line">    t.fd(<span class="number">4</span> * s2)</span><br><span class="line">    t.left(<span class="number">90</span>)</span><br><span class="line">    t.fd(<span class="number">17.5</span> * s2)</span><br><span class="line">    t.right(<span class="number">90</span>)</span><br><span class="line">    t.fd(<span class="number">4</span> * s2)</span><br><span class="line">    t.left(<span class="number">90</span>)</span><br><span class="line">    t.fd(<span class="number">2.5</span> * s2)</span><br><span class="line">    t.seth(<span class="number">180</span> + <span class="number">90</span> - t.atan(<span class="number">4</span>/<span class="number">3.5</span>))</span><br><span class="line">    t.circle(-t.sqrt(<span class="number">3.5</span> ** <span class="number">2</span> + <span class="number">4</span> ** <span class="number">2</span>), t.atan(<span class="number">1.5</span>/<span class="number">5</span>)+t.atan(<span class="number">3.5</span>/<span class="number">4</span>))</span><br><span class="line">    t.seth(<span class="number">225</span>)</span><br><span class="line">    t.fd(<span class="number">8</span> * s2)</span><br><span class="line">    t.left(<span class="number">90</span>)</span><br><span class="line">    t.fd(<span class="number">4.5</span> * s2)</span><br><span class="line">    t.left(<span class="number">90</span>)</span><br><span class="line">    t.fd(<span class="number">3</span> * s2)</span><br><span class="line">    t.right(<span class="number">90</span>)</span><br><span class="line">    t.fd(<span class="number">17.5</span> * s2)</span><br><span class="line">    t.end_fill()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sickle</span>():</span></span><br><span class="line">    s2 = t.sqrt(<span class="number">2</span>)</span><br><span class="line">    r1 = t.sqrt(<span class="number">6</span> ** <span class="number">2</span> + <span class="number">15.5</span> ** <span class="number">2</span>)</span><br><span class="line">    r2 = r1 - <span class="number">5.5</span></span><br><span class="line"></span><br><span class="line">    t.go(<span class="number">4.5</span>, -<span class="number">22.5</span>)</span><br><span class="line">    t.begin_fill()</span><br><span class="line">    t.seth(<span class="number">225</span>)</span><br><span class="line">    t.fd(<span class="number">2.5</span> * s2)</span><br><span class="line">    t.left(<span class="number">90</span> - t.atan(<span class="number">2.5</span> / <span class="number">12.5</span>))</span><br><span class="line">    t.circle(<span class="number">18</span>, t.atan(<span class="number">15</span>/<span class="number">10</span>))</span><br><span class="line">    t.circle(<span class="number">16</span>, <span class="number">180</span>)</span><br><span class="line">    t.seth(-t.atan(<span class="number">6</span>/<span class="number">15.5</span>))</span><br><span class="line">    t.circle(-r1, t.atan(<span class="number">15.5</span>/<span class="number">6</span>))</span><br><span class="line">    t.circle(-r2, <span class="number">90</span>)</span><br><span class="line">    t.circle(-r1, t.atan(<span class="number">12</span> / <span class="number">11.5</span>))</span><br><span class="line">    t.end_fill()</span><br><span class="line"></span><br><span class="line">    t.go(<span class="number">3.5</span>, -<span class="number">30.5</span>)</span><br><span class="line">    t.dot(<span class="number">5</span>)</span><br><span class="line">    t.go(<span class="number">6</span>, -<span class="number">30</span>)</span><br><span class="line">    t.begin_fill()</span><br><span class="line">    t.seth(<span class="number">45</span>)</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">        t.fd(<span class="number">1</span>)</span><br><span class="line">        t.left(<span class="number">90</span>)</span><br><span class="line">        t.fd(<span class="number">2</span> * t.sqrt(<span class="number">2</span>))</span><br><span class="line">        t.left(<span class="number">90</span>)</span><br><span class="line">    t.end_fill()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pattern</span>():</span></span><br><span class="line">    t.sethome(-<span class="number">57</span>, <span class="number">37</span>)</span><br><span class="line">    t.color(<span class="string">&#x27;yellow&#x27;</span>)</span><br><span class="line">    hammer()</span><br><span class="line">    sickle()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    t.setup(width=<span class="number">0.75</span>, height=<span class="number">0.75</span>)</span><br><span class="line">    t.speed(<span class="number">3</span>) <span class="comment"># 绘图速度</span></span><br><span class="line">    t.pensize(<span class="number">1</span>) <span class="comment"># 笔直径</span></span><br><span class="line">    t.bgcolor(<span class="string">&#x27;white&#x27;</span>) <span class="comment"># 背景颜色</span></span><br><span class="line">    t.title(<span class="string">&quot;中国共产党党旗&quot;</span>)</span><br><span class="line">    t.setp(<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line">    face(<span class="number">144</span>, <span class="number">96</span>)</span><br><span class="line">    pattern()</span><br><span class="line"></span><br><span class="line">    t.hideturtle()</span><br><span class="line">    t.done()</span><br></pre></td></tr></table></figure>
+
+<p>老实说，花了我挺多时间的。因为……两个原因：</p>
+<ul>
+<li>一、Turtle库确实有点问题（没办法避免，一个像素的偏差很难控制）；</li>
+<li>二、我的脑残&amp;手残……</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9B%BD%E6%97%97/55603211">国旗标准</a>、<a target="_blank" rel="noopener" href="https://news.12371.cn/2018/04/13/ARTI1523583923915284.shtml">党旗标准</a>。</p>
+<p>而且专门研究过党旗之后，我还在网上找到了很多党旗图案，好一些都是不标准的（初看没有问题，斜着看就有问题了）。我想这可能都是那些单纯不知道有标准，或者干脆懒得看标准的人画的。总之我希望能做到尽善尽美。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://blog.spranaky.xyz/archives/c92b4972/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://blog.spranaky.xyz/archives/c92b4972/&text=关于国旗和党旗画法的问题"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://blog.spranaky.xyz/archives/c92b4972/&is_video=false&description=关于国旗和党旗画法的问题"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=关于国旗和党旗画法的问题&body=Check out this article: https://blog.spranaky.xyz/archives/c92b4972/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://blog.spranaky.xyz/archives/c92b4972/&title=关于国旗和党旗画法的问题"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://blog.spranaky.xyz/archives/c92b4972/&name=关于国旗和党旗画法的问题&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://blog.spranaky.xyz/archives/c92b4972/&t=关于国旗和党旗画法的问题"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020-2021
+    spranaky
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
