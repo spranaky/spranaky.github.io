@@ -1,21 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/archives/3eeb/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>如何优雅地使用VSCode编辑PyQt代码？</title>
+    <url>/archives/5c80/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>最近在学习PyQt，之前一直使用<a href="https://www.sublimetext.com/">Sublime Text</a>+cmd的方式运行Python代码，直到最近觉得这样有点蠢（其实之前是懒得换），于是打算配置一套完整的开发环境。<a href="https://code.visualstudio.com/">VSCode</a>正合我意。</p>
+<span id="more"></span>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><ul>
+<li>VSCode: <a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></li>
+<li>PyQt:</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install PyQt5</span><br><span class="line">pip install PyQt5-tools</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h1 id="VSCode设置"><a href="#VSCode设置" class="headerlink" title="VSCode设置"></a>VSCode设置</h1><h2 id="字体、配色及主题"><a href="#字体、配色及主题" class="headerlink" title="字体、配色及主题"></a>字体、配色及主题</h2><p>之前用惯了Sublime Text，对它的字体、配色和主题念念不忘，所以我在VSCode里把它设置成了类似的风格。</p>
+<p>打开设置，可以设置字体大小和字体：</p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-position.jpg"></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-font.jpg"></p>
+<p>字体在这里是<code>MONACO, Consolas, &#39;Courier New&#39;, monospace</code>。</p>
+<p>然后是主题：</p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/theme-position.jpg"></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-theme.jpg"></p>
+<p>选择<code>Monokai</code>就OK。</p>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>这里要安装两个插件，一个用来运行Python文件，另一个和PyQt有关。</p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/ext-python.jpg"></p>
+<p>跟着安装向导走一遍，设置好Python的运行目录。</p>
+<p>安装完这个插件之后，在Python文件中按F5，就可以运行这个文件了。</p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/ext-pyqt.jpg"></p>
+<p>还记得不？之前用pip安装了<code>PyQt5-tools</code>，这里面包含了Qt Designer，它可以编辑ui文件，有了它，再也不用在代码里手工做布局工作了。</p>
+<p>要在VSCode中使用Qt Designer的话，要设置刚才安装的插件<code>PYQT Integration</code>：</p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/pyqt-set-position.jpg"></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-pyqt.jpg"></p>
+<p>在最下面的输入框中输入Qt Designer的路径。</p>
+<p>关于Qt Designer的安装路径，一说是<code>&lt;Python安装目录&gt;/Lib/site-packages/pyqt5/Qt/bin/designer.exe</code>，另一说是<code>&lt;Python安装目录&gt;/Lib/site-packages/qt5_applications/Qt/bin/designer.exe</code>，看你自己咯。</p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>那么，怎么使用呢？看图：</p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/how-to-use.jpg"></p>
+<p>右击工作区的一个文件，最下面的<code>PYQT</code>开头的四个选项：</p>
+<ul>
+<li>New Form，打开Qt Designer，可以创建新的ui文件。</li>
+<li>Preview，预览ui文件。</li>
+<li>Edit In Designer，在Qt Designer中打开当前（ui）文件。</li>
+<li>Compile Form，把ui文件编译为py文件。</li>
+</ul>
 ]]></content>
+      <categories>
+        <category>技术性</category>
+      </categories>
+      <tags>
+        <tag>VSCode</tag>
+        <tag>PyQt</tag>
+      </tags>
   </entry>
 </search>
