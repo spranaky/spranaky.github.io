@@ -21,7 +21,7 @@
 <h1 id="总的程序">总的程序</h1>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> matplotlib.backends.backend_qt5agg <span class="keyword">import</span> FigureCanvasQTAgg <span class="keyword">as</span> FigureCanvas</span><br><span class="line"><span class="keyword">from</span> matplotlib.figure <span class="keyword">import</span> Figure</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> QApplication, QDialog</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> Ui_ui <span class="keyword">import</span> Ui_draw</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Draw</span>(<span class="title class_ inherited__">FigureCanvas</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, dpi=<span class="number">128</span></span>):</span><br><span class="line">        self.fig = Figure(dpi=dpi) <span class="comment"># 新建一个 Figure 对象，用于绘图</span></span><br><span class="line">        <span class="built_in">super</span>().__init__(self.fig)</span><br><span class="line">        self.axes = self.fig.add_subplot(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.draw_function()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">draw_function</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># 实际的绘图函数</span></span><br><span class="line">        x = np.arange(<span class="number">0</span>, <span class="number">2</span>, <span class="number">0.01</span>)</span><br><span class="line">        y = x ** x</span><br><span class="line">        self.axes.plot(x, y)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DrawDialog</span>(QDialog, Ui_draw):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        self.setupUi(self)</span><br><span class="line"></span><br><span class="line">        self.drawWidget = Draw()</span><br><span class="line">        <span class="comment"># 原本有两个部件，上面是一个 QLabel，下面是一个 QButtonBox</span></span><br><span class="line">        <span class="comment"># 在垂直布局中插入绘图部件</span></span><br><span class="line">        self.verticalLayout.insertWidget(<span class="number">1</span>, self.drawWidget)</span><br><span class="line"></span><br><span class="line">        self.show()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    form = DrawDialog()</span><br><span class="line">    sys.exit(app.exec_())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 <h1 id="效果">效果</h1>
-<p><img src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/b45b/show.jpg"></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/b45b/show.jpg"></p>
 ]]></content>
       <categories>
         <category>技术性</category>
@@ -35,57 +35,40 @@
     <title>如何优雅地使用VSCode编辑PyQt代码？</title>
     <url>/archives/5c80/</url>
     <content><![CDATA[<h1 id="简介">简介</h1>
-<p>最近在学习PyQt，之前一直使用<a
-href="https://www.sublimetext.com/">Sublime
-Text</a>+cmd的方式运行Python代码，直到最近觉得这样有点蠢（其实之前是懒得换），于是打算配置一套完整的开发环境。<a
-href="https://code.visualstudio.com">VSCode</a>正合我意。</p>
+<p>最近在学习PyQt，之前一直使用<a href="https://www.sublimetext.com/">Sublime Text</a>+cmd的方式运行Python代码，直到最近觉得这样有点蠢（其实之前是懒得换），于是打算配置一套完整的开发环境。<a href="https://code.visualstudio.com">VSCode</a>正合我意。</p>
 <span id="more"></span>
 <h1 id="下载">下载</h1>
 <ul>
-<li>VSCode: <a
-href="https://code.visualstudio.com">https://code.visualstudio.com</a></li>
+<li>VSCode: <a href="https://code.visualstudio.com" class="uri">https://code.visualstudio.com</a></li>
 <li>PyQt:</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install PyQt5</span><br><span class="line">pip install PyQt5-tools</span><br></pre></td></tr></table></figure>
 <h1 id="vscode设置">VSCode设置</h1>
 <h2 id="字体配色及主题">字体、配色及主题</h2>
-<p>之前用惯了Sublime
-Text，对它的字体、配色和主题念念不忘，所以我在VSCode里把它设置成了类似的风格。</p>
+<p>之前用惯了Sublime Text，对它的字体、配色和主题念念不忘，所以我在VSCode里把它设置成了类似的风格。</p>
 <p>打开设置，可以设置字体大小和字体：</p>
-<p><img
-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-position.jpg" /></p>
-<p><img
-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-font.jpg" /></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-position.jpg" /></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-font.jpg" /></p>
 <p>字体在这里是<code>MONACO, Consolas, 'Courier New', monospace</code>。</p>
 <p>然后是主题：</p>
-<p><img
-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/theme-position.jpg" /></p>
-<p><img
-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-theme.jpg" /></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/theme-position.jpg" /></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-theme.jpg" /></p>
 <p>选择<code>Monokai</code>就OK。</p>
 <h2 id="插件">插件</h2>
 <p>这里要安装两个插件，一个用来运行Python文件，另一个和PyQt有关。</p>
-<p><img
-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/ext-python.jpg" /></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/ext-python.jpg" /></p>
 <p>跟着安装向导走一遍，设置好Python的运行目录。</p>
 <p>安装完这个插件之后，在Python文件中按F5，就可以运行这个文件了。</p>
-<p><img
-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/ext-pyqt.jpg" /></p>
-<p>还记得不？之前用pip安装了<code>PyQt5-tools</code>，这里面包含了Qt
-Designer，它可以编辑ui文件，有了它，再也不用在代码里手工做布局工作了。</p>
-<p>要在VSCode中使用Qt
-Designer的话，要设置刚才安装的插件<code>PYQT Integration</code>：</p>
-<p><img
-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/pyqt-set-position.jpg" /></p>
-<p><img
-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-pyqt.jpg" /></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/ext-pyqt.jpg" /></p>
+<p>还记得不？之前用pip安装了<code>PyQt5-tools</code>，这里面包含了Qt Designer，它可以编辑ui文件，有了它，再也不用在代码里手工做布局工作了。</p>
+<p>要在VSCode中使用Qt Designer的话，要设置刚才安装的插件<code>PYQT Integration</code>：</p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/pyqt-set-position.jpg" /></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/set-pyqt.jpg" /></p>
 <p>在最下面的输入框中输入Qt Designer的路径。</p>
-<p>关于Qt
-Designer的安装路径，一说是<code>&lt;Python安装目录&gt;/Lib/site-packages/pyqt5/Qt/bin/designer.exe</code>，另一说是<code>&lt;Python安装目录&gt;/Lib/site-packages/qt5_applications/Qt/bin/designer.exe</code>，看你自己咯。</p>
+<p>关于Qt Designer的安装路径，一说是<code>&lt;Python安装目录&gt;/Lib/site-packages/pyqt5/Qt/bin/designer.exe</code>，另一说是<code>&lt;Python安装目录&gt;/Lib/site-packages/qt5_applications/Qt/bin/designer.exe</code>，看你自己咯。</p>
 <h1 id="使用">使用</h1>
 <p>那么，怎么使用呢？看图：</p>
-<p><img
-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/how-to-use.jpg" /></p>
+<p><img data-src="https://nispring.oss-cn-shenzhen.aliyuncs.com/blog/5c80/how-to-use.jpg" /></p>
 <p>右击工作区的一个文件，最下面的<code>PYQT</code>开头的四个选项：</p>
 <ul>
 <li>New Form，打开Qt Designer，可以创建新的ui文件。</li>
