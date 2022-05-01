@@ -26,6 +26,7 @@
       </categories>
       <tags>
         <tag>Matplotlib</tag>
+        <tag>Python</tag>
         <tag>PyQt</tag>
       </tags>
   </entry>
@@ -33,7 +34,7 @@
     <title>配置 VSCode + PyQt 环境</title>
     <url>/archives/5c80/</url>
     <content><![CDATA[<h1 id="简介">简介</h1>
-<p>最近在学习PyQt，之前一直使用 <a href="https://www.sublimetext.com/">Sublime Text</a> + cmd 的方式运行Python代码，直到最近觉得这样有点蠢（其实之前是懒得换），于是打算配置一套完整的开发环境。<a href="https://code.visualstudio.com">VSCode</a> 正合我意。</p>
+<p>最近在学习 PyQt，之前一直使用 <a href="https://www.sublimetext.com/">Sublime Text</a> + cmd 的方式运行Python代码，直到最近觉得这样有点蠢（其实之前是懒得换），于是打算配置一套完整的开发环境。<a href="https://code.visualstudio.com">VSCode</a> 正合我意。</p>
 <span id="more"></span>
 <h1 id="下载">下载</h1>
 <ul>
@@ -79,6 +80,7 @@
         <category>技术性</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>PyQt</tag>
         <tag>VSCode</tag>
       </tags>
